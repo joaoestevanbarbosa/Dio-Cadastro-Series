@@ -22,7 +22,7 @@ namespace Dio_Cadastro_Series
 
         //Métodos
 
-        public Serie (int id, Genero genero, string titulo, string descricao, int ano)
+        public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
             this.Genero = genero;
@@ -42,6 +42,7 @@ namespace Dio_Cadastro_Series
             retorno += "Título: " + this.Titulo + Environment.NewLine;
             retorno += "Descrição: " + this.Descricao + Environment.NewLine;
             retorno += "Ano de Início: " + this.Ano + Environment.NewLine;
+            retorno += "Excluido: " + this.Excluido;
 
             return retorno;
         }
@@ -53,12 +54,17 @@ namespace Dio_Cadastro_Series
 
         public string retornaId()
         {
-            return this.Id.ToString() ;
+            return this.Id.ToString();
         }
 
         public void Excluir()
         {
             this.Excluido = true;
         }
+
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
+        }
     }
-}
+}    
